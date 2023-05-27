@@ -1,0 +1,69 @@
+
+# -- Icestick leds map
+#
+#           D1
+#        D4 D5 D2
+#           D3
+#
+# --    D1-D4: Red leds
+# --    D5: green led
+
+
+# ------------ Red leds ------------------------------------------------------
+set_io -pullup yes D1 99
+set_io -pullup yes D2 98
+set_io -pullup yes D3 97
+set_io -pullup yes D4 96
+
+# ------------ Green led -----------------------------------------------------
+set_io -pullup yes D5 95
+
+
+#   FPGA pins:
+#
+#     ----------
+#    | 3V3  3V3 |
+#    | GND  GND |
+#    | 91    81 |
+#    | 90    80 |
+#    | 88    79 |
+#    | 87    78 | <
+#     ----------
+#
+set_io -pullup yes PMOD1 78
+set_io -pullup yes PMOD2 79
+set_io -pullup yes PMOD3 80
+set_io -pullup yes PMOD4 81
+set_io -pullup yes PMOD7 87
+set_io -pullup yes PMOD8 88
+set_io -pullup yes PMOD9 90
+set_io -pullup yes PMOD10 91
+
+# ------------------------ EXPANSION I/O ------------------------------------
+#
+# -- Numeration
+#
+#  Top Row (TR):
+#                                       v
+#          --------------------------------
+#         |  10  9  8  7  6  5 4  3  2  1  |
+#          --------------------------------
+
+# --- FPGA pins
+#
+#  Top Row (TR)
+#                                                       v
+#        --------------------------------------------------
+#       | 119  118  117  116  115  114  113  112  GND  3v3 |
+#        --------------------------------------------------
+#
+# -- Top Row
+set_io -pullup yes TR3 112
+set_io -pullup yes TR4 113
+set_io -pullup yes TR5 114
+set_io -pullup yes TR6 115
+set_io -pullup yes TR7 116
+set_io -pullup yes TR8 117
+set_io -pullup yes TR9 118
+set_io -pullup yes TR10 119
+
